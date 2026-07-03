@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galeri Tanaman Hias</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f8f4;
+}
+
+/* Header */
+
+header{
+    background:linear-gradient(135deg,#2E8B57,#4CAF50);
+    color:white;
+    text-align:center;
+    padding:45px;
+}
+
+header h1{
+    font-size:40px;
+}
+
+header p{
+    margin-top:10px;
+}
+
+/* Navbar */
+
+nav{
+    background:#1B5E20;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    padding:15px 20px;
+    transition:.3s;
+}
+
+nav a:hover{
+    background:#43A047;
+}
+
+/* Container */
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:40px auto;
+}
+
+.judul{
+    text-align:center;
+    color:#2E8B57;
+    margin-bottom:30px;
+}
+
+/* Galeri */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card-body{
+    padding:20px;
+}
+
+.card-body h3{
+    color:#2E8B57;
+    margin-bottom:10px;
+}
+
+.card-body p{
+    text-align:justify;
+    line-height:24px;
+    margin-bottom:15px;
+}
+
+.btn{
+    display:inline-block;
+    background:#2E8B57;
+    color:white;
+    text-decoration:none;
+    padding:10px 18px;
+    border-radius:8px;
+}
+
+.btn:hover{
+    background:#1B5E20;
+}
+
+/* Footer */
+
+footer{
+    background:#1B5E20;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+
+@media(max-width:768px){
+
+header h1{
+font-size:30px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Galeri Tanaman Hias</h1>
+
+<p>Ekosistem Bisnis Tanaman Hias</p>
+
+</header>
+
+<nav>
+
+<a href="index.html">Beranda</a>
+<a href="profil.html">Profil</a>
+<a href="transaksi.html">Transaksi</a>
+<a href="database.html">Basis Data</a>
+<a href="modeldata.html">Model Data</a>
+<a href="warehouse.html">Warehouse</a>
+<a href="normalisasi.html">Normalisasi</a>
+<a href="erd.html">ERD</a>
+<a href="galeri.html">Galeri</a>
+<a href="login.html">Login</a>
+
+</nav>
+
+<div class="container">
+
+<h2 class="judul">Koleksi Tanaman Hias</h2>
+
+<div class="gallery">
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1520412099551-62b6bafeb5bb?w=600" alt="Monstera">
+
+<div class="card-body">
+
+<h3>Monstera Deliciosa</h3>
+
+<p>
+Tanaman hias tropis dengan daun besar dan berlubang yang memberikan kesan elegan pada ruangan.
+</p>
+
+<a href="#" class="btn">Lihat Detail</a>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1604762524889-3e2fcc145683?w=600" alt="Aglaonema">
+
+<div class="card-body">
+
+<h3>Aglaonema</h3>
+
+<p>
+Memiliki corak daun berwarna hijau, merah, dan putih sehingga menjadi salah satu tanaman favorit.
+</p>
+
+<a href="#" class="btn">Lihat Detail</a>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1459156212016-c812468e2115?w=600" alt="Kaktus">
+
+<div class="card-body">
+
+<h3>Kaktus Mini</h3>
+
+<p>
+Tanaman mungil yang mudah dirawat, tahan terhadap cuaca panas, dan cocok sebagai dekorasi meja.
+</p>
+
+<a href="#" class="btn">Lihat Detail</a>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=600" alt="Lidah Mertua">
+
+<div class="card-body">
+
+<h3>Lidah Mertua</h3>
+
+<p>
+Tanaman yang terkenal mampu membantu menyaring udara sehingga membuat ruangan lebih segar.
+</p>
+
+<a href="#" class="btn">Lihat Detail</a>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1463320…

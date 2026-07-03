@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Transaksi | Ekosistem Bisnis Tanaman Hias</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+background:#f4f8f4;
+}
+
+/* Header */
+
+header{
+background:linear-gradient(135deg,#2e8b57,#4CAF50);
+color:white;
+text-align:center;
+padding:40px;
+}
+
+header h1{
+font-size:38px;
+}
+
+/* Menu */
+
+nav{
+background:#1B5E20;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+padding:15px 20px;
+transition:.3s;
+}
+
+nav a:hover{
+background:#43A047;
+}
+
+/* Container */
+
+.container{
+width:90%;
+max-width:1100px;
+margin:40px auto;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,.15);
+margin-bottom:30px;
+}
+
+.card h2{
+color:#2E8B57;
+margin-bottom:20px;
+border-left:6px solid #4CAF50;
+padding-left:10px;
+}
+
+input,select{
+width:100%;
+padding:12px;
+margin-bottom:15px;
+border:1px solid #ccc;
+border-radius:8px;
+}
+
+button{
+padding:12px 25px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-size:16px;
+margin-right:10px;
+}
+
+.simpan{
+background:#2E8B57;
+color:white;
+}
+
+.reset{
+background:#f44336;
+color:white;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:20px;
+}
+
+table th{
+background:#2E8B57;
+color:white;
+padding:12px;
+}
+
+table td{
+padding:10px;
+border:1px solid #ddd;
+text-align:center;
+}
+
+table tr:nth-child(even){
+background:#f8f8f8;
+}
+
+footer{
+background:#1B5E20;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+@media(max-width:768px){
+
+table{
+font-size:12px;
+}
+
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+
+<h1>Transaksi Tanaman Hias</h1>
+
+<p>Kelola transaksi penjualan tanaman hias dengan mudah.</p>
+
+</header>
+
+<nav>
+
+<a href="index.html">Beranda</a>
+<a href="profil.html">Profil</a>
+<a href="transaksi.html">Transaksi</a>
+<a href="database.html">Basis Data</a>
+<a href="modeldata.html">Model Data</a>
+<a href="warehouse.html">Warehouse</a>
+<a href="normalisasi.html">Normalisasi</a>
+<a href="erd.html">ERD</a>
+<a href="galeri.html">Galeri</a>
+<a href="login.html">Login</a>
+
+</nav>
+
+<div class="container">
+
+<div class="card">
+
+<h2>Form Transaksi</h2>
+
+<form onsubmit="return validasi()">
+
+<input type="text" id="nama" placeholder="Nama Pembeli">
+
+<select id="tanaman">
+<option value="">Pilih Tanaman</option>
+<option>Monstera</option>
+<option>Aglaonema</option>
+<option>Kaktus Mini</option>
+<option>Lidah Mertua</option>
+</select>
+
+<input type="number" id="jumlah" placeholder="Jumlah">
+
+<input type="number" id="harga" placeholder="Harga">
+
+<input type="date" id="tanggal">
+
+<button class="simpan">Simpan</button>
+
+<button type="reset" class="reset">Reset</button>
+
+</form>
+
+</div>
+
+<div class="card">
+
+<h2>Daftar Transaksi</h2>
+
+<table>
+
+<tr>
+
+<th>No</th>
+
+<th>Pembeli</th>
+
+<th>Tanaman</th>
+
+<th>Jumlah</th>
+
+<th>Harga</th>
+
+<th>Tanggal</th>
+
+<th>Total</th>
+
+</tr>
+
+<tr>
+
+<td>1</td>
+
+<td>Budi</td>
+
+<td>Monstera</td>
+
+<td>2</td>
+
+<td>Rp250.000</td>
+
+<td>03/07/2026</td>
+
+<td>Rp500.000</td>
+
+</tr>
+
+<tr>
+
+<td>2</td>
+
+<td>Siti</td>
+
+<td>Aglaonema</td>
+
+<td>1</td>
+
+<td>Rp350.000</td>
+
+<td>03/07/2026</td>
+
+<td>Rp350.000</td>
+
+</tr>
+
+<tr>
+
+<td>3</td>
+
+<td>Andi</td>
+
+<td>Kaktus Mini</td>
+
+<td>4</td>
+
+<td>Rp50.000</td>
+
+<td>02/07/2026</td>
+
+<td>Rp200.000</td>
+
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+<footer>
+
+<p>© 2026 Ekosistem Bisnis Tanaman Hias | Nendi Sunjaya</p>
+
+</footer>
+
+<script>
+
+function validasi(){
+
+let nama=document.getElementById("nama").value;
+let tanaman=document.getElementById("tanaman").value;
+let jumlah=document.getElementById("jumlah").value;
+let harga=document.getElementById("harga").value;
+let tanggal=document.getElementById("tanggal").value;
+
+if(nama==""||tanaman==""||jumlah==""||harga==""||tanggal==""){
+
+alert("Semua data harus diisi!");
+
+return false;
+
+}
+
+alert("Transaksi berhasil disimpan.");
+
+return true;
+
+}
+
+</script>
+
+</body>
+</html>

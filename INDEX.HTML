@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ekosistem Bisnis Tanaman Hias</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f5f8f5;
+color:#333;
+}
+
+header{
+background:linear-gradient(rgba(0,100,0,.7),rgba(34,139,34,.7)),
+url("https://images.unsplash.com/photo-1463320726281-696a485928c7?auto=format&fit=crop&w=1600&q=80");
+background-size:cover;
+background-position:center;
+height:90vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+}
+
+.hero h1{
+font-size:55px;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:20px;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 35px;
+background:#fff;
+color:#2e8b57;
+text-decoration:none;
+font-weight:bold;
+border-radius:30px;
+transition:.3s;
+}
+
+.btn:hover{
+background:#2e8b57;
+color:#fff;
+}
+
+nav{
+background:#1b5e20;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+nav ul{
+display:flex;
+justify-content:center;
+list-style:none;
+flex-wrap:wrap;
+}
+
+nav ul li a{
+display:block;
+padding:18px;
+color:white;
+text-decoration:none;
+transition:.3s;
+}
+
+nav ul li a:hover{
+background:#4caf50;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+padding:60px 0;
+}
+
+.judul{
+text-align:center;
+font-size:35px;
+color:#2e8b57;
+margin-bottom:40px;
+}
+
+.card-box{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:#fff;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+text-align:center;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card img{
+width:100%;
+height:180px;
+object-fit:cover;
+border-radius:10px;
+margin-bottom:15px;
+}
+
+.card h3{
+color:#2e8b57;
+margin-bottom:10px;
+}
+
+footer{
+background:#1b5e20;
+color:white;
+text-align:center;
+padding:25px;
+margin-top:50px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:35px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="hero">
+
+<h1>Ekosistem Bisnis Tanaman Hias</h1>
+
+<p>Membangun Sistem Informasi Bisnis Tanaman Hias yang Modern dan Responsif</p>
+
+<a href="#layanan" class="btn">Mulai Jelajahi</a>
+
+</div>
+
+</header>
+
+<nav>
+
+<ul>
+
+<li><a href="index.html">Beranda</a></li>
+
+<li><a href="profil.html">Profil</a></li>
+
+<li><a href="transaksi.html">Transaksi</a></li>
+
+<li><a href="database.html">Basis Data</a></li>
+
+<li><a href="modeldata.html">Model Data</a></li>
+
+<li><a href="warehouse.html">Warehouse</a></li>
+
+<li><a href="normalisasi.html">Normalisasi</a></li>
+
+<li><a href="erd.html">ERD</a></li>
+
+<li><a href="galeri.html">Galeri</a></li>
+
+<li><a href="login.html">Login</a></li>
+
+</ul>
+
+</nav>
+
+<section class="container">
+
+<h2 class="judul">Layanan Kami</h2>
+
+<div class="card-box">
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1520412099551-62b6bafeb5bb?w=500" alt="Monstera">
+
+<h3>Monstera</h3>
+
+<p>Tanaman hias premium dengan daun lebar yang elegan.</p>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1604762524889-3e2fcc145683?w=500" alt="Aglaonema">
+
+<h3>Aglaonema</h3>
+
+<p>Memiliki warna daun yang cantik dan mudah dirawat.</p>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1459156212016-c812468e2115?w=500" alt="Kaktus">
+
+<h3>Kaktus Mini</h3>
+
+<p>Cocok dijadikan dekorasi meja maupun ruangan.</p>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=500" alt="Lidah Mertua">
+
+<h3>Lidah Mertua</h3>
+
+<p>Membantu menyaring udara sehingga rumah menjadi lebih segar.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<h3>Ekosistem Bisnis Tanaman Hias</h3>
+
+<p>© 2026 | Nendi Sunjaya | Sistem Informasi</p>
+
+</footer>
+
+</body>

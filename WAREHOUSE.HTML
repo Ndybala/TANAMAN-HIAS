@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Warehouse | Ekosistem Bisnis Tanaman Hias</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f8f4;
+}
+
+/* Header */
+
+header{
+    background:linear-gradient(135deg,#2E8B57,#4CAF50);
+    color:white;
+    text-align:center;
+    padding:45px;
+}
+
+header h1{
+    font-size:40px;
+}
+
+header p{
+    margin-top:10px;
+}
+
+/* Navbar */
+
+nav{
+    background:#1B5E20;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    padding:15px 20px;
+    transition:.3s;
+}
+
+nav a:hover{
+    background:#43A047;
+}
+
+/* Container */
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:40px auto;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    margin-bottom:30px;
+}
+
+.card h2{
+    color:#2E8B57;
+    margin-bottom:20px;
+    border-left:6px solid #4CAF50;
+    padding-left:10px;
+}
+
+.card p{
+    text-align:justify;
+    line-height:28px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+table th{
+    background:#2E8B57;
+    color:white;
+    padding:12px;
+}
+
+table td{
+    border:1px solid #ddd;
+    padding:12px;
+}
+
+table tr:nth-child(even){
+    background:#f8f8f8;
+}
+
+ul{
+    margin-left:20px;
+    line-height:30px;
+}
+
+footer{
+    background:#1B5E20;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+
+@media(max-width:768px){
+
+header h1{
+font-size:30px;
+}
+
+table{
+font-size:12px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Data Warehouse</h1>
+
+<p>Ekosistem Bisnis Tanaman Hias</p>
+
+</header>
+
+<nav>
+
+<a href="index.html">Beranda</a>
+<a href="profil.html">Profil</a>
+<a href="transaksi.html">Transaksi</a>
+<a href="database.html">Basis Data</a>
+<a href="modeldata.html">Model Data</a>
+<a href="warehouse.html">Warehouse</a>
+<a href="normalisasi.html">Normalisasi</a>
+<a href="erd.html">ERD</a>
+<a href="galeri.html">Galeri</a>
+<a href="login.html">Login</a>
+
+</nav>
+
+<div class="container">
+
+<div class="card">
+
+<h2>Pengertian Data Warehouse</h2>
+
+<p>
+Data Warehouse adalah tempat penyimpanan data yang digunakan untuk
+mengumpulkan, mengintegrasikan, dan menganalisis data dari berbagai
+sumber. Pada sistem Ekosistem Bisnis Tanaman Hias, Data Warehouse
+digunakan untuk menyimpan data penjualan, stok, pelanggan, dan supplier
+yang nantinya dimanfaatkan dalam proses analisis bisnis dan pembuatan
+laporan.
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>Sumber Data</h2>
+
+<table>
+
+<tr>
+<th>No</th>
+<th>Sumber Data</th>
+<th>Keterangan</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td>Data Tanaman</td>
+<td>Informasi produk tanaman hias.</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>Data Transaksi</td>
+<td>Riwayat penjualan dan pembelian.</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>Data Supplier</td>
+<td>Informasi pemasok tanaman.</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>Data Pelanggan</td>
+<td>Informasi pelanggan.</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>Data Stok</td>
+<td>Jumlah persediaan tanaman.</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="card">
+
+<h2>Manfaat Data Warehouse</h2>
+
+<ul>
+
+<li>📊 Menyediakan laporan penjualan yang akurat.</li>
+
+<li>🌿 Mengetahui tanaman paling laris.</li>
+
+<li>📦 Memantau stok tanaman.</li>
+
+<li>📈 Membantu analisis perkembangan bisnis.</li>
+
+<li>💰 Mengetahui keuntungan setiap periode.</li>
+
+<li>🎯 Membantu pengambilan keputusan bisnis.</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h2>Alur Data Warehouse</h2>
+
+<table>
+
+<tr>
+<th>Tahapan</th>
+<th>Penjelasan</th>
+</tr>
+
+<tr>
+<td>Extract</td>
+<td>Mengambil data dari database transaksi.</td>
+</tr>
+
+<tr>
+<td>Transform</td>
+<td>Membersihkan dan mengolah data agar konsisten.</td>
+</tr>
+
+<tr>
+<td>Load</td>
+<td>Menyimpan data ke dalam Data Warehouse.</td>
+</tr>
+
+<tr>
+<td>Analysis</td>
+<td>Menganalisis data untuk menghasilkan laporan.</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+<footer>
+
+<p>© 2026 Ekosistem Bisnis Tanaman Hias | Nendi Sunjaya</p>
+
+</footer>
+
+</body>
+</html>

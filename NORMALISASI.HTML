@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Normalisasi Database | Ekosistem Bisnis Tanaman Hias</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f8f4;
+}
+
+/* Header */
+
+header{
+    background:linear-gradient(135deg,#2E8B57,#4CAF50);
+    color:white;
+    text-align:center;
+    padding:45px;
+}
+
+header h1{
+    font-size:40px;
+}
+
+header p{
+    margin-top:10px;
+}
+
+/* Navbar */
+
+nav{
+    background:#1B5E20;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    padding:15px 20px;
+    transition:.3s;
+}
+
+nav a:hover{
+    background:#43A047;
+}
+
+/* Container */
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:40px auto;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    margin-bottom:30px;
+}
+
+.card h2{
+    color:#2E8B57;
+    margin-bottom:20px;
+    border-left:6px solid #4CAF50;
+    padding-left:10px;
+}
+
+.card p{
+    text-align:justify;
+    line-height:28px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+table th{
+    background:#2E8B57;
+    color:white;
+    padding:12px;
+}
+
+table td{
+    border:1px solid #ddd;
+    padding:12px;
+}
+
+table tr:nth-child(even){
+    background:#f8f8f8;
+}
+
+ul{
+    margin-left:20px;
+    line-height:30px;
+}
+
+footer{
+    background:#1B5E20;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+
+@media(max-width:768px){
+
+header h1{
+font-size:30px;
+}
+
+table{
+font-size:12px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Normalisasi Database</h1>
+
+<p>Ekosistem Bisnis Tanaman Hias</p>
+
+</header>
+
+<nav>
+
+<a href="index.html">Beranda</a>
+<a href="profil.html">Profil</a>
+<a href="transaksi.html">Transaksi</a>
+<a href="database.html">Basis Data</a>
+<a href="modeldata.html">Model Data</a>
+<a href="warehouse.html">Warehouse</a>
+<a href="normalisasi.html">Normalisasi</a>
+<a href="erd.html">ERD</a>
+<a href="galeri.html">Galeri</a>
+<a href="login.html">Login</a>
+
+</nav>
+
+<div class="container">
+
+<div class="card">
+
+<h2>Pengertian Normalisasi</h2>
+
+<p>
+Normalisasi adalah proses penyusunan tabel dalam database agar data tersimpan
+secara efisien, mengurangi duplikasi data (redundansi), serta menjaga
+konsistensi dan integritas data. Dengan normalisasi, pengelolaan data pada
+sistem Ekosistem Bisnis Tanaman Hias menjadi lebih mudah dan terstruktur.
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>Tujuan Normalisasi</h2>
+
+<ul>
+
+<li>✅ Mengurangi data yang berulang (redundansi).</li>
+
+<li>✅ Menjaga konsistensi data.</li>
+
+<li>✅ Mempermudah proses update data.</li>
+
+<li>✅ Menghemat ruang penyimpanan database.</li>
+
+<li>✅ Meningkatkan efisiensi pengelolaan data.</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h2>Tahapan Normalisasi</h2>
+
+<table>
+
+<tr>
+
+<th>Bentuk Normal</th>
+
+<th>Penjelasan</th>
+
+</tr>
+
+<tr>
+
+<td><b>1NF (First Normal Form)</b></td>
+
+<td>
+Setiap kolom hanya memiliki satu nilai (tidak ada data ganda atau
+atribut yang berulang).
+</td>
+
+</tr>
+
+<tr>
+
+<td><b>2NF (Second Normal Form)</b></td>
+
+<td>
+Menghilangkan ketergantungan parsial sehingga setiap atribut non-key
+bergantung penuh pada primary key.
+</td>
+
+</tr>
+
+<tr>
+
+<td><b>3NF (Third Normal Form)</b></td>
+
+<td>
+Menghilangkan ketergantungan transitif sehingga setiap atribut hanya
+bergantung pada primary key.
+</td>
+
+</tr>
+
+</table>
+
+</div>
+
+<div class="card">
+
+<h2>Contoh Normalisasi Data Tanaman</h2>
+
+<table>
+
+<tr>
+
+<th>Sebelum Normalisasi</th>
+
+<th>Sesudah Normalisasi</th>
+
+</tr>
+
+<tr>
+
+<td>
+
+ID001 - Monstera - Supplier A - Jakarta
+
+</td>
+
+<td>
+
+Tabel Tanaman → ID001, Monstera
+
+<br><br>
+
+Tabel Supplier → Supplier A, Jakarta
+
+</td>
+
+…

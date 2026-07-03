@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login | Ekosistem Bisnis Tanaman Hias</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:linear-gradient(rgba(0,100,0,.6),rgba(0,100,0,.6)),
+    url("https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=1600");
+    background-size:cover;
+    background-position:center;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.login-box{
+    width:380px;
+    background:white;
+    padding:35px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
+}
+
+.login-box h2{
+    text-align:center;
+    color:#2E8B57;
+    margin-bottom:10px;
+}
+
+.login-box p{
+    text-align:center;
+    color:#666;
+    margin-bottom:25px;
+}
+
+label{
+    display:block;
+    margin-bottom:6px;
+    font-weight:bold;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    margin-bottom:18px;
+    font-size:15px;
+}
+
+input:focus{
+    border-color:#2E8B57;
+    outline:none;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    background:#2E8B57;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:#1B5E20;
+}
+
+.reset{
+    margin-top:10px;
+    background:#f44336;
+}
+
+.reset:hover{
+    background:#c62828;
+}
+
+.link{
+    text-align:center;
+    margin-top:20px;
+}
+
+.link a{
+    color:#2E8B57;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.link a:hover{
+    text-decoration:underline;
+}
+
+@media(max-width:480px){
+
+.login-box{
+    width:90%;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="login-box">
+
+<h2>Login</h2>
+
+<p>Ekosistem Bisnis Tanaman Hias</p>
+
+<form onsubmit="return login()">
+
+<label>Username</label>
+
+<input type="text" id="username" placeholder="Masukkan Username">
+
+<label>Password</label>
+
+<input type="password" id="password" placeholder="Masukkan Password">
+
+<button type="submit">Login</button>
+
+<button type="reset" class="reset">Reset</button>
+
+</form>
+
+<div class="link">
+
+<a href="index.html">← Kembali ke Beranda</a>
+
+</div>
+
+</div>
+
+<script>
+
+function login(){
+
+let user=document.getElementById("username").value;
+let pass=document.getElementById("password").value;
+
+if(user=="" || pass==""){
+
+alert("Username dan Password wajib diisi!");
+
+return false;
+
+}
+
+if(user=="admin" && pass=="12345"){
+
+alert("Login berhasil!");
+
+window.location="index.html";
+
+return false;
+
+}else{
+
+alert("Username atau Password salah!");
+
+return false;
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
